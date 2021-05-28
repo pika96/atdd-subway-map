@@ -221,7 +221,7 @@ public class Sections {
 
     private boolean isEndStation(Station station) {
         Section topSection = sections.get(0);
-        Section bottomSection = sections.get(sections.size() - 1);
+        Section bottomSection = getLastSection();
 
         return topSection.isUpStation(station) || bottomSection.isDownStation(station);
     }
