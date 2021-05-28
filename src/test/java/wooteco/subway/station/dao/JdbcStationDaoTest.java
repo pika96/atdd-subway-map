@@ -3,6 +3,7 @@ package wooteco.subway.station.dao;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
+import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.TestConstructor;
 import wooteco.subway.exception.notfoundexception.NotFoundStationException;
@@ -12,7 +13,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@DataJdbcTest
+@JdbcTest
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
 class JdbcStationDaoTest {
 

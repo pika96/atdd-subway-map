@@ -70,7 +70,7 @@ public class JDBCLineDao implements LineDao {
 
     @Override
     public void deleteAll() {
-        String query = "TRUNCATE TABLE LINE";
+        String query = "DELETE FROM LINE";
         this.jdbcTemplate.update(query);
     }
 
