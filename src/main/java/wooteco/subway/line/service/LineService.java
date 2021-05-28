@@ -48,13 +48,9 @@ public class LineService {
     }
 
     private void checkDuplicated(Line line) {
-        if (checkDuplicatedLineName(line)) {
+        if (lineDao.findByName(line.getName()).isPresent()) {
             throw new DuplicatedNameException();
         }
-    }
-
-    private boolean checkDuplicatedLineName(Line line) {
-        return lineDao.findByName(line.getName()).isPresent();
     }
 
     public List<LineResponse> findAll() {
